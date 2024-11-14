@@ -58,7 +58,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://print-hub-cb65e-default-rtdb.firebaseio.com/contact.json",
+        "https://smart-eager-default-rtdb.firebaseio.com/contact.json",
         {
           method: "POST",
           headers: {

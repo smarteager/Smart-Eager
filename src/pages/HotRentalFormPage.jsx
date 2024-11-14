@@ -78,7 +78,7 @@ const RentalFormPage = () => {
 
     try {
       const response = await fetch(
-        "https://print-hub-cb65e-default-rtdb.firebaseio.com/booking.json",
+        "https://smart-eager-default-rtdb.firebaseio.com/booking.json",
         {
           method: "POST",
           headers: {
