@@ -2,15 +2,17 @@ import React from "react";
 import "../../styles/our-member.css";
 import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import ava01 from "../../assets/all-images/ava-1.jpg";
-import ava02 from "../../assets/all-images/ava-3.jpg";
-import ava03 from "../../assets/all-images/ava-3.jpg";
+import ava01 from "../../assets/all-images/1.jpg";
+import ava02 from "../../assets/all-images/2.jpg";
+import ava03 from "../../assets/all-images/3.jpg";
+import ava04 from "../../assets/all-images/4.jpg";
 
 
 const OUR__MEMBERS = [
   {
     name: "Mr Dayaram",
-    experience: "Managing Partner",
+    experience: "8 years of experience",
+    post: "Sr. Manager",
     fbUrl: "#",
     instUrl: "#",
     twitUrl: "#",
@@ -18,8 +20,9 @@ const OUR__MEMBERS = [
     imgUrl: ava01,
   },
   {
-    name: "Gaurav Parashar",
-    experience: "Sr Technician",
+    name: "Mr. Gaurav Parashar",
+    experience: "11 years of experience",
+    post: "Sr Technician",
     fbUrl: "#",
     instUrl: "#",
     twitUrl: "#",
@@ -28,8 +31,9 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Sachin Sain",
-    experience: "Sr Technician",
+    name: "Mr. Sachin Sain",
+    experience: "6 years of experience",
+    post: "Sr Technician",
     fbUrl: "#",
     instUrl: "#",
     twitUrl: "#",
@@ -37,33 +41,34 @@ const OUR__MEMBERS = [
     imgUrl: ava03,
   },
 
-  {
-    name: "Govind Sharma",
-    experience: "Marketing",
-    fbUrl: "#",
-    instUrl: "#",
-    twitUrl: "#",
-    linkedinUrl: "#",
-    imgUrl: ava01,
-  },
+  // {
+  //   name: "Govind Sharma",
+  //   experience: "Marketing",
+  //   fbUrl: "#",
+  //   instUrl: "#",
+  //   twitUrl: "#",
+  //   linkedinUrl: "#",
+  //   imgUrl: ava01,
+  // },
 
-  {
-    name: "Aslam",
-    experience: "Junior Technician",
-    fbUrl: "#",
-    instUrl: "#",
-    twitUrl: "#",
-    linkedinUrl: "#",
-    imgUrl: ava02,
-  },
+  // {
+  //   name: "Aslam",
+  //   experience: "Junior Technician",
+  //   fbUrl: "#",
+  //   instUrl: "#",
+  //   twitUrl: "#",
+  //   linkedinUrl: "#",
+  //   imgUrl: ava02,
+  // },
   {
     name: "Imran Khan",
-    experience: "Sr Manager",
+    experience: "5 years of experience",
+    post: "Marketing",
     fbUrl: "#",
     instUrl: "#",
     twitUrl: "#",
     linkedinUrl: "#",
-    imgUrl: ava03,
+    imgUrl: ava04,
   },
 ];
 
@@ -97,6 +102,9 @@ const OurMembers = () => {
             <h6 className="text-center mb-0 mt-3">{item.name}</h6>
             <p className="section__description text-center">
               {item.experience}
+            </p>
+            <p className="section__description text-center">
+              {item.post}
             </p>
           </div>
         </Col>
