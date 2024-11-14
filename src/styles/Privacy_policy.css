@@ -1,0 +1,51 @@
+.privacy__policy {
+  padding: 60px 20px; /* Adequate padding for mobile */
+  background-color: #f9f9f9; /* Light background for readability */
+}
+
+.privacy__content {
+  max-width: 800px; /* Set a maximum width for content */
+  margin: 0 auto; /* Center content */
+  background: #ffffff; /* White background for sections */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 30px; /* Padding for content */
+}
+
+.policy__title {
+  font-size: 2.5rem; /* Larger font for the main title */
+  margin-bottom: 30px; /* Spacing below the title */
+  color: #333; /* Darker title color */
+  text-align: center; /* Center title */
+}
+
+.policy__section {
+  margin-bottom: 30px; /* Space between sections */
+  padding: 20px; /* Padding inside section */
+  border: 1px solid #e0e0e0; /* Light border for sections */
+  border-radius: 5px; /* Rounded corners for sections */
+  background-color: #fafafa; /* Slightly off-white for contrast */
+}
+
+.section__title {
+  font-size: 1.5rem; /* Font size for section titles */
+  margin-bottom: 10px; /* Spacing below section titles */
+  color: #444; /* Darker section title color */
+}
+
+h5 {
+  font-size: 1.2rem; /* Font size for sub-headings */
+  margin-top: 20px; /* Space above sub-headings */
+  color: #555; /* Color for sub-headings */
+}
+
+p {
+  line-height: 1.6; /* Improved line spacing for readability */
+  color: #666; /* Grey color for paragraph text */
+}
+
+@media (max-width: 768px) {
+  .privacy__content {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}

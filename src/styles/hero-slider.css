@@ -1,0 +1,122 @@
+.hero__slider {
+  overflow: hidden;
+}
+
+.slider__item {
+  max-width: 100%;
+  height: 80vh; 
+}
+
+.slider__item-01 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/Split-AC-Slide6.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-02 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/Oil-Heaters-Slide2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-03 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/Refrigrator-Slide4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-04 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/Refrigrator-Service-Slide3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-05 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/AC-Repair-Slide1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-06 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/Repair-Nec-Slide5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__content {
+  padding-top: 150px; /* Ensure content is vertically positioned correctly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure full-height slider item content */
+  text-align: center;
+}
+
+.slider__content h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.reserve__btn {
+  background: #fff !important;
+  color: #000d6b !important;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.reserve__btn a {
+  text-decoration: none;
+  color: #000d6b;
+}
+
+.reserve__btn:hover {
+  background: #000d6b;
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  .slider__item {
+    height: 530px; /* Reduced height for tablets */
+  }
+
+  .slider__content {
+    margin-top: -50px;
+  }
+
+  .slider__content h1 {
+    font-size: 2rem; /* Smaller heading for tablets */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider__item {
+    height: 450px; /* Reduced height for smaller screens */
+  }
+
+  .slider__content {
+    margin-top: 0;
+  }
+
+  .slider__content h1 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+}
