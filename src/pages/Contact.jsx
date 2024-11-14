@@ -250,7 +250,7 @@ const Contact = () => {
                 <div className="d-flex align-items-center gap-2">
                   <h6 className="mb-0 fs-6">Email:</h6>
                   <p className="section__description mb-0">
-                    Info@smartEager.com
+                    info.smarteager@gmail.com
                   </p>
                 </div>
 
