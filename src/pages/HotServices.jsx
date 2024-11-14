@@ -124,9 +124,9 @@ const services = [
 
   {
     id: 6,
-    name: "Oil Heater",
+    name: "Oil RoomHeater",
     code: 107,
-    price: "₹600/month",
+    price: "₹1000/month",
     image: Heater1,
     description: "Portable Room Heater, Adjustable Temperature.",
     variants: {
