@@ -1,135 +1,134 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
-<!-- 	created with www.mysitemapgenerator.com	 -->
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- created with www.mysitemapgenerator.com -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://smarteager.com/</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://smarteager.com/about</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/home/allproducts</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://smarteager.com/maintainance-services</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/service-Booking</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/contact</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/terms</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/refunds</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/Return-Pol</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/home</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/room-heater</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/ac</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/washing_machine</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/ro-water-purifier-rental</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/refrigerator-rental</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/Geyser</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/BookingForm</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/service/</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://smarteager.com/blogs/</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://smarteager.com/kyc</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/winter-products</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/summer-rentals</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/rental-form</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/blogs</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/inverter-rental</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://smarteager.com/construction-equipment-rental</loc>
-<lastmod>2024-11-14T23:10:25+01:00</lastmod>
-<priority>1.0</priority>
-</url>
+  <url>
+    <loc>https://smarteager.com/</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/about</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/home/allproducts</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/maintainance-services</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/service-Booking</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/contact</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/terms</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/refunds</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/Return-Pol</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/home</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/room-heater</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/ac</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/washing_machine</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/ro-water-purifier-rental</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/refrigerator-rental</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/Geyser</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/BookingForm</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/service/</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/blogs/</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/kyc</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/winter-products</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/summer-rentals</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/rental-form</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/blogs</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/inverter-rental</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarteager.com/construction-equipment-rental</loc>
+    <lastmod>2024-11-14T23:10:25+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
 </urlset>
