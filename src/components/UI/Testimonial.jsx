@@ -51,7 +51,14 @@ const Testimonial = () => {
             "I rented an AC unit for a summer event, and it worked perfectly!
             The service was prompt and professional. Highly recommend!"
           </p>
-          <div style={{ marginTop: "1rem", display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
             <img
               src={ava01}
               alt="Customer 1"
@@ -63,8 +70,14 @@ const Testimonial = () => {
               }}
             />
             <div>
-              <h6 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
-                Priya Sharma
+              <h6
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: "bold",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Manoj Kumar
               </h6>
               <p style={{ color: "#555", fontSize: "0.9rem" }}>Event Planner</p>
             </div>
@@ -83,7 +96,14 @@ const Testimonial = () => {
             "The washing machine rental was a lifesaver during my house
             renovation. Fast delivery and easy setup!"
           </p>
-          <div style={{ marginTop: "1rem", display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
             <img
               src={ava02}
               alt="Customer 2"
@@ -95,8 +115,14 @@ const Testimonial = () => {
               }}
             />
             <div>
-              <h6 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
-                Rahul Verma
+              <h6
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: "bold",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Priya Sharma
               </h6>
               <p style={{ color: "#555", fontSize: "0.9rem" }}>Homeowner</p>
             </div>
@@ -115,7 +141,14 @@ const Testimonial = () => {
             "I recently rented a RO water purifier, and it’s been a game
             changer! Clean water at my convenience."
           </p>
-          <div style={{ marginTop: "1rem", display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
             <img
               src={ava03}
               alt="Customer 3"
@@ -127,10 +160,18 @@ const Testimonial = () => {
               }}
             />
             <div>
-              <h6 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
-                Sneha Gupta
+              <h6
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: "bold",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Arjun Mehta
               </h6>
-              <p style={{ color: "#555", fontSize: "0.9rem" }}>Health Conscious</p>
+              <p style={{ color: "#555", fontSize: "0.9rem" }}>
+                Health Conscious
+              </p>
             </div>
           </div>
         </div>
@@ -144,10 +185,17 @@ const Testimonial = () => {
           }}
         >
           <p style={{ color: "#555", fontSize: "1rem" }}>
-            "I rented construction equipment for my project, and the quality
-            was excellent. Will definitely rent again!"
+            "I rented construction equipment for my project, and the quality was
+            excellent. Will definitely rent again!"
           </p>
-          <div style={{ marginTop: "1rem", display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
             <img
               src={ava04}
               alt="Customer 4"
@@ -159,8 +207,14 @@ const Testimonial = () => {
               }}
             />
             <div>
-              <h6 style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
-                Arjun Mehta
+              <h6
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: "bold",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Sneha gupta
               </h6>
               <p style={{ color: "#555", fontSize: "0.9rem" }}>Contractor</p>
             </div>
