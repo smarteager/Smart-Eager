@@ -1,3 +1,16 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+
+# Googlebot specific rule (if needed)
+User-agent: Googlebot
+Allow: /
+
+# Allow Google Maps if it's embedded or related content
+User-agent: Googlebot
+Allow: /maps/
+
+# Additional important directories or paths
+Allow: /images/
+Allow: /css/
+Allow: /js/
