@@ -29,6 +29,8 @@ import ShippingPolicy from "../components/Policies/ShippingPolicy";
 import CancelRefPol from "../components/Policies/Cancel&RefPol";
 import SummerPage from "../pages/Summer/SummerPage";
 import ACMaintainance from "../pages/Maintainance_Services/Maintainance";
+import Maintainance from "../pages/Firebase/Maintainance";
+import AdminDashboard from "../pages/Admin/Admin_Dashboards";
 const Routers = () => {
   return (
     <>
@@ -65,6 +67,7 @@ const Routers = () => {
         <Route path="/terms" element={<Termsandcondition />} />
         <Route path="/Return-Pol" element={<CancelRefPol />} />
         <Route path="/refunds" element={<ShippingPolicy />} />
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </>
   );
