@@ -36,7 +36,8 @@ const Routers = () => {
     <>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/service/:id" element={<ServiceDetails />} />
         <Route path="/rental-form" element={<RentalFormPage />} />
