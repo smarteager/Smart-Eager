@@ -7,6 +7,7 @@ const quickLinks = [
   { path: "/about", display: "About Us" },
   { path: "/service-Booking", display: "Services" },
   { path: "/contact", display: "Contact" },
+  { path: "/admin", display: "Admin Login" },
 ];
 
 const policies = [
