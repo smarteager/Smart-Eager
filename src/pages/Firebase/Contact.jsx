@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { database } from "../../firebaseConfig";
-import { ref, onValue } from "firebase/database";
+import { ref, onValue, set, get } from "firebase/database";
 
 const styles = {
   container: {
@@ -61,31 +61,89 @@ const styles = {
     backgroundColor: "#f9fafb",
     borderRadius: "8px",
     fontSize: "16px",
-  }
+  },
+  newRow: {
+    backgroundColor: "#f0f9ff",
+  },
+  checkedRow: {
+    backgroundColor: "#f1f5f9",
+    opacity: 0.8,
+  },
+  newBadge: {
+    backgroundColor: "#22c55e",
+    color: "white",
+    padding: "4px 8px",
+    borderRadius: "4px",
+    fontSize: "12px",
+    fontWeight: "500",
+    display: "inline-block",
+  },
+  statusColumn: {
+    width: "100px",
+  },
 };
 
 const Contact = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hoveredRow, setHoveredRow] = useState(null);
+  const [checkedContacts, setCheckedContacts] = useState(() => {
+    const savedChecks = localStorage.getItem("checkedContactItems");
+    return savedChecks ? new Set(JSON.parse(savedChecks)) : new Set();
+  });
 
   useEffect(() => {
-    const dbRef = ref(database, "contact");
+    const contactRef = ref(database, "contact");
+    const checkedRef = ref(database, "checkedContactItems");
 
-    onValue(dbRef, (snapshot) => {
+    get(checkedRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        setCheckedContacts(new Set(snapshot.val()));
+      }
+    });
+
+    const contactListener = onValue(contactRef, (snapshot) => {
       const fetchedData = snapshot.val();
       if (fetchedData) {
         const formattedData = Object.keys(fetchedData).map((key) => ({
           id: key,
+          isNew: !checkedContacts.has(key),
+          timestamp: fetchedData[key].timestamp || Date.now(),
           ...fetchedData[key],
         }));
+
+        formattedData.sort((a, b) => b.timestamp - a.timestamp);
         setData(formattedData);
       } else {
         setData([]);
       }
       setLoading(false);
     });
+
+    const checkedListener = onValue(checkedRef, (snapshot) => {
+      if (snapshot.exists()) {
+        setCheckedContacts(new Set(snapshot.val()));
+      }
+    });
+
+    return () => {
+      contactListener();
+      checkedListener();
+    };
   }, []);
+
+  const handleRowClick = (id) => {
+    const updatedCheckedContacts = new Set([...checkedContacts, id]);
+    setCheckedContacts(updatedCheckedContacts);
+
+    const checkedRef = ref(database, "checkedContactItems");
+    set(checkedRef, [...updatedCheckedContacts]);
+
+    localStorage.setItem(
+      "checkedContactItems",
+      JSON.stringify([...updatedCheckedContacts])
+    );
+  };
 
   if (loading) {
     return (
@@ -111,10 +169,15 @@ const Contact = () => {
         <table style={styles.table}>
           <thead>
             <tr>
-              <th style={{ ...styles.th, borderRadius: "8px 0 0 0" }}>Name</th>
+              <th style={{ ...styles.th, borderRadius: "8px 0 0 0" }}>
+                Status
+              </th>
+              <th style={styles.th}>Name</th>
               <th style={styles.th}>Email</th>
               <th style={styles.th}>Mobile</th>
-              <th style={{ ...styles.th, borderRadius: "0 8px 0 0" }}>Message</th>
+              <th style={{ ...styles.th, borderRadius: "0 8px 0 0" }}>
+                Message
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -123,14 +186,26 @@ const Contact = () => {
                 key={item.id}
                 style={{
                   ...styles.row,
-                  backgroundColor: hoveredRow === item.id ? "#f8fafc" : "transparent"
+                  ...(item.isNew &&
+                    !checkedContacts.has(item.id) &&
+                    styles.newRow),
+                  ...(checkedContacts.has(item.id) && styles.checkedRow),
+                  backgroundColor:
+                    hoveredRow === item.id ? "#f8fafc" : "transparent",
+                  cursor: "pointer",
                 }}
                 onMouseEnter={() => setHoveredRow(item.id)}
                 onMouseLeave={() => setHoveredRow(null)}
+                onClick={() => handleRowClick(item.id)}
               >
+                <td style={styles.td}>
+                  {item.isNew && !checkedContacts.has(item.id) && (
+                    <span style={styles.newBadge}>New</span>
+                  )}
+                </td>
                 <td style={styles.td}>{item.name}</td>
                 <td style={styles.td}>
-                  <a 
+                  <a
                     href={`mailto:${item.email}`}
                     style={{ color: "#2563eb", textDecoration: "none" }}
                   >
@@ -138,7 +213,7 @@ const Contact = () => {
                   </a>
                 </td>
                 <td style={styles.td}>
-                  <a 
+                  <a
                     href={`tel:${item.mobile}`}
                     style={{ color: "#2563eb", textDecoration: "none" }}
                   >
