@@ -1,6 +1,8 @@
 import React from "react";
-import WM from "../../assets/all-images/Washing machine/7.jpg";
-import AC from "../../assets/all-images/Split AC/5.jpg";
+import WM from "../../assets/all-images/Washing machine/7.png";
+import Ref from "../../assets/all-images/Washing machine/ref.png";
+import Geyser from "../../assets/all-images/Washing machine/geyser.png";
+import AC from "../../assets/all-images/Split AC/13.png";
 import RO from "../../assets/all-images/RO.jpg";
 
 const Services = () => {
@@ -28,14 +30,12 @@ const Services = () => {
     },
     {
       name: "Refrigerator",
-      image:
-        "https://c.shld.net/rpx/i/s/i/spin/image/spin_prod_606429101?wid=800&hei=800&op_sharpen=1",
+      image:Ref,
       link: "/refrigerator-rental",
     },
     {
       name: "Geyser",
-      image:
-        "https://5.imimg.com/data5/HU/DJ/FB/SELLER-5577939/geyser-ms-35-50l-jpg.jpg",
+      image:Geyser,
       link: "/Geyser",
     },
   ];
@@ -66,6 +66,7 @@ const Services = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              backgroundColor: "gray",
             }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.transform = "scale(1.05)")
