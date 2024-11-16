@@ -92,7 +92,7 @@ const AdminDashboard = () => {
     if (enteredCode === adminCode) {
       setAccessGranted(true);
     } else {
-      alert("Invalid credentials. Please try again.");
+      alert("Wrong admin code. Please try again.");
     }
   };
 
