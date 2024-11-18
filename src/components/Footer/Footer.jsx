@@ -150,7 +150,7 @@ const Footer = () => {
                   fontWeight: "300",
                 }}
               >
-                Phone: +91-7419011362
+                Phone: +91-7419011361 ,7419011362
               </p>
               <p
                 style={{

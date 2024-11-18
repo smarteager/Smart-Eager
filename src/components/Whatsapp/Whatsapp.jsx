@@ -1,14 +1,13 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
-const WhatsAppIcon = () => {
-  const iconStyle = {
+const FloatingButtons = () => {
+  const commonStyle = {
     position: "fixed",
-    bottom: "20px",
+    bottom: "20px", // Adjust to position correctly relative to each other
     right: "20px",
     width: "60px",
     height: "60px",
-    backgroundColor: "#25D366",
     color: "#fff",
     borderRadius: "50%",
     display: "flex",
@@ -18,8 +17,19 @@ const WhatsAppIcon = () => {
     boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.3)",
     cursor: "pointer",
     zIndex: "1000",
-    animation: "pulse 2s infinite",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  };
+
+  const whatsappStyle = {
+    ...commonStyle,
+    backgroundColor: "#25D366",
+    bottom: "20px", // Positioned at the bottom
+  };
+
+  const callStyle = {
+    ...commonStyle,
+    backgroundColor: "#1029e7",
+    bottom: "90px", // Positioned above WhatsApp button
   };
 
   const hoverStyle = {
@@ -28,31 +38,51 @@ const WhatsAppIcon = () => {
   };
 
   return (
-    <a
-      href="https://wa.me/919306186668" // Replace with your WhatsApp number
-      target="_blank"
-      rel="noopener noreferrer"
-      style={iconStyle}
-      onMouseEnter={(e) => {
-        Object.assign(e.currentTarget.style, hoverStyle);
-      }}
-      onMouseLeave={(e) => {
-        Object.assign(e.currentTarget.style, iconStyle);
-      }}
-    >
-      <FaWhatsapp />
-    </a>
+    <>
+      {/* Call Button */}
+      <a
+        href="tel:+917419011361" // Replace with your phone number
+        style={callStyle}
+        onMouseEnter={(e) => {
+          Object.assign(e.currentTarget.style, hoverStyle);
+        }}
+        onMouseLeave={(e) => {
+          Object.assign(e.currentTarget.style, callStyle);
+        }}
+      >
+        <FaPhoneAlt />
+      </a>
+
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/919306186668" // Replace with your WhatsApp number
+        target="_blank"
+        rel="noopener noreferrer"
+        style={whatsappStyle}
+        onMouseEnter={(e) => {
+          Object.assign(e.currentTarget.style, hoverStyle);
+        }}
+        onMouseLeave={(e) => {
+          Object.assign(e.currentTarget.style, whatsappStyle);
+        }}
+      >
+        <FaWhatsapp />
+      </a>
+    </>
   );
 };
 
 // CSS for animation
 const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(`
+styleSheet.insertRule(
+  `
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
   }
-`, styleSheet.cssRules.length);
+`,
+  styleSheet.cssRules.length
+);
 
-export default WhatsAppIcon;
+export default FloatingButtons;

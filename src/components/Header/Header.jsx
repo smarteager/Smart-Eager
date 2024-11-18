@@ -59,7 +59,7 @@ const Navbar = () => {
       position: isMobile ? "fixed" : "relative",
       left: 0,
       top: isMobile ? "80px" : "auto",
-      backgroundColor: isOpen ? "#ffffff" : "transparent", // White background when menu is open
+      backgroundColor: isOpen ? "#ffffff" : "transparent",
       width: isMobile ? "100%" : "auto",
       height: isMobile ? "calc(100vh - 80px)" : "auto",
       alignItems: isMobile ? "center" : "flex-start",
@@ -76,7 +76,7 @@ const Navbar = () => {
       backgroundColor: isOpen ? "#ffffff" : "transparent", // Keep background white when open, transparent when closed
     },
     whatsappButton: {
-      display: "flex",
+      // display: "flex",
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "#25D366", // WhatsApp button color
@@ -87,12 +87,13 @@ const Navbar = () => {
       fontSize: "20px",
       textDecoration: "none",
       position: isMobile ? "absolute" : "relative",
+      display: isMobile ? "none" : "flex",
       left: isMobile ? "50%" : "auto",
       transform: isMobile ? "translateX(-50%)" : "none",
       right: !isMobile ? "10px" : "auto",
     },
     CallButton: {
-      display: "flex",
+      // display: "flex",
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "#1029e7", // Call  button color
@@ -103,6 +104,7 @@ const Navbar = () => {
       fontSize: "20px",
       textDecoration: "none",
       position: isMobile ? "absolute" : "relative",
+      display: isMobile ? "none" : "flex",
       left: isMobile ? "50%" : "auto",
       transform: isMobile ? "translateX(-50%)" : "none",
       right: !isMobile ? "10px" : "auto",
