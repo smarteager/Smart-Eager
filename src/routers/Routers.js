@@ -31,6 +31,7 @@ import SummerPage from "../pages/Summer/SummerPage";
 import ACMaintainance from "../pages/Maintainance_Services/Maintainance";
 import Maintainance from "../pages/Firebase/Maintainance";
 import AdminDashboard from "../pages/Admin/Admin_Dashboards";
+import RentalService from "../pages/Rental Service/RentalService";
 const Routers = () => {
   return (
     <>
@@ -63,6 +64,7 @@ const Routers = () => {
           element={<ConstructionPage />}
         />
         <Route path="/home/allproducts" element={<AllProduct />} />
+        <Route path="/home/Rental-Service" element={<RentalService />} />
         <Route path="/kyc" element={<KYCDoc />} />
         <Route path="/service-Booking" element={<ServicesDesc />} />
         <Route path="/terms" element={<Termsandcondition />} />

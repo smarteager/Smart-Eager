@@ -12,6 +12,7 @@ const AllProduct = () => {
       <CommonSection title="Available Products" />
       <section style={{ marginBottom: 0, paddingBottom: 0 }}>
         <Container style={{ marginBottom: 0, paddingBottom: 0 }}>
+          <SeasonCard />
           <Row>
             {services.map((item) => (
               <Col lg="4" md="6" key={item.id}>

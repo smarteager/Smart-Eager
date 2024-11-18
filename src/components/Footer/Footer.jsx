@@ -142,7 +142,7 @@ const Footer = () => {
                   fontWeight: "300",
                 }}
               >
-                Teekali-Akhlimpur Road, City- Badshahpur, Haryana, Pin - 122101
+                Teekali Road, City- Badshahpur, Haryana, Pin - 122101
               </p>
               <p
                 style={{
@@ -150,7 +150,7 @@ const Footer = () => {
                   fontWeight: "300",
                 }}
               >
-                Phone: +91-9306174774
+                Phone: +91-7419011362
               </p>
               <p
                 style={{
@@ -158,7 +158,7 @@ const Footer = () => {
                   fontWeight: "300",
                 }}
               >
-                Email:  info.smarteager@gmail.com
+                Email: info.smarteager@gmail.com
               </p>
             </div>
           </Col>

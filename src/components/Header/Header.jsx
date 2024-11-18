@@ -10,7 +10,7 @@ const Navbar = () => {
   const navLinks = [
     { path: "/", display: "Home" },
     { path: "/about", display: "About" },
-    { path: "/home/allproducts", display: "Rental Services" },
+    { path: "/home/Rental-Service", display: "Rental Services" },
     { path: "/maintainance-services", display: "Maintainance Services" },
     { path: "/home/allproducts", display: "All Products" },
   ];
@@ -91,6 +91,22 @@ const Navbar = () => {
       transform: isMobile ? "translateX(-50%)" : "none",
       right: !isMobile ? "10px" : "auto",
     },
+    CallButton: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#1029e7", // Call  button color
+      color: "#fff",
+      padding: "10px 15px",
+      borderRadius: "50%",
+      cursor: "pointer",
+      fontSize: "20px",
+      textDecoration: "none",
+      position: isMobile ? "absolute" : "relative",
+      left: isMobile ? "50%" : "auto",
+      transform: isMobile ? "translateX(-50%)" : "none",
+      right: !isMobile ? "10px" : "auto",
+    },
     callNowButton: {
       display: isMobile ? "none" : "flex",
       alignItems: "center",
@@ -126,7 +142,6 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <img src={logo} alt="Logo" style={styles.logo} />
         </Link>
-
         {/* Menu Icon (Hamburger) */}
         <div style={styles.menuIcon} onClick={() => setIsOpen(!isOpen)}>
           <div style={{ width: "30px", height: "20px", position: "relative" }}>
@@ -153,7 +168,6 @@ const Navbar = () => {
             />
           </div>
         </div>
-
         {/* Nav Menu */}
         <ul style={styles.navMenu}>
           {navLinks.map((link, index) => (
@@ -171,16 +185,20 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
         {/* Call Now Button with Phone Number (Visible only on desktop) */}
-        <a href="tel:+919306186668" style={styles.callNowButton}>
-          <FaPhoneAlt style={{ fontSize: "20px" }} />
-          <span style={styles.callNowText}>+919306186668</span>
+        {/* Call Button 1 */}
+        <a href="tel:+917419011361" style={styles.CallButton}>
+          <FaPhoneAlt style={{ fontSize: "24px" }} />
+        </a>
+
+        {/* Call Button 2 */}
+        <a href="tel:+917419011362" style={styles.CallButton}>
+          <FaPhoneAlt style={{ fontSize: "24px" }} />
         </a>
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/+919306186668"
+          href="https://wa.me/+917419011361"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.whatsappButton}
