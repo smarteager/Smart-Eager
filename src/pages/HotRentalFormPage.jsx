@@ -109,7 +109,27 @@ const RentalFormPage = () => {
           theme: "colored",
           transition: Bounce,
         });
-        navigate("/");
+
+        // Construct the WhatsApp message with form data
+        const whatsappMessage = `Booking Details:\n\n` +
+          `Service: ${service.name}\n` +
+          `Selected Variant: ${selectedVariant}\n` +
+          `Selected Duration: ${selectedDuration}\n` +
+          `Full Name: ${fullName}\n` +
+          `WhatsApp Number: ${whatsappNumber}\n` +
+          `Alternate Number: ${alternateNumber}\n` +
+          `Email: ${email}\n` +
+          `Delivery Address: ${deliveryAddress}\n` +
+          `Message: ${message || 'No message'}\n` +
+          `Location: Latitude: ${latitude}, Longitude: ${longitude}`;
+
+        // Redirect to WhatsApp with the pre-filled message
+        const whatsappLink = `https://wa.me/+919306186668?text=${encodeURIComponent(whatsappMessage)}`;
+        window.location.href = whatsappLink;
+
+        // Optional: navigate to the home page after sending to WhatsApp
+        // navigate("/");
+
       } else {
         throw new Error("Submission failed: " + response.statusText);
       }
