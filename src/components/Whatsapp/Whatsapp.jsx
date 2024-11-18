@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 const FloatingButtons = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const commonStyle = {
     position: "fixed",
     bottom: "20px", // Adjust to position correctly relative to each other
@@ -24,12 +32,14 @@ const FloatingButtons = () => {
     ...commonStyle,
     backgroundColor: "#25D366",
     bottom: "20px", // Positioned at the bottom
+    display: isMobile ? "flex" : "none",
   };
 
   const callStyle = {
     ...commonStyle,
     backgroundColor: "#1029e7",
     bottom: "90px", // Positioned above WhatsApp button
+    display: isMobile ? "flex" : "none",
   };
 
   const hoverStyle = {
