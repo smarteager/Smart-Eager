@@ -145,7 +145,28 @@ const BookingForm = () => {
           theme: "colored",
           transition: Bounce,
         });
-        navigate("/");
+
+        // Construct the WhatsApp message with form data
+        const message = `Booking Details:
+        Name: ${formData.firstName} ${formData.lastName}
+        Email: ${formData.email}
+        Phone: ${formData.phone}
+        Address: ${formData.address}
+        Category: ${formData.category}
+        Service: ${formData.service}
+        Details: ${formData.details}
+        Location: Latitude: ${location.latitude}, Longitude: ${location.longitude}`;
+
+        // Replace <your-phone-number> with the phone number that will receive the message (must include country code, e.g., +1234567890)
+        const whatsappLink = `https://wa.me/+919306186668?text=${encodeURIComponent(
+          message
+        )}`;
+
+        // Redirect the user to WhatsApp with the message
+        window.location.href = whatsappLink;
+
+        // Optional: navigate to the home page after sending to WhatsApp
+        // navigate("/");
       } else {
         setSubmissionStatus("error");
         toast.error("Something went wrong", {
@@ -327,10 +348,10 @@ const BookingForm = () => {
             type="textarea"
             name="details"
             id="details"
-            rows="5"
-            placeholder="Write any additional details here"
+            placeholder="Enter any additional details"
             value={formData.details}
             onChange={handleInputChange}
+            required
             style={{ borderRadius: "5px", padding: "10px" }}
           />
         </FormGroup>
@@ -338,22 +359,31 @@ const BookingForm = () => {
         <Button
           type="submit"
           color="primary"
-          style={{ width: "100%", padding: "10px", borderRadius: "5px" }}
+          block
+          style={{
+            borderRadius: "5px",
+            padding: "12px",
+            backgroundColor: "#007bff",
+            borderColor: "#007bff",
+            fontSize: "16px",
+          }}
         >
           Submit
         </Button>
-
-        {submissionStatus === "success" && (
-          <Alert color="success" style={{ marginTop: "15px" }}>
-            Your record saved successfully; our team will call you shortly.
-          </Alert>
-        )}
-        {submissionStatus === "error" && (
-          <Alert color="danger" style={{ marginTop: "15px" }}>
-            Error submitting the booking. Please try again.
-          </Alert>
-        )}
       </Form>
+
+      {submissionStatus === "success" && (
+        <Alert color="success" style={{ marginTop: "20px" }}>
+          Form submitted successfully! You will be redirected to WhatsApp
+          shortly.
+        </Alert>
+      )}
+
+      {submissionStatus === "error" && (
+        <Alert color="danger" style={{ marginTop: "20px" }}>
+          Something went wrong! Please try again.
+        </Alert>
+      )}
     </>
   );
 };

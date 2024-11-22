@@ -85,14 +85,118 @@ const styles = {
     display: "inline-block",
     marginBottom: "8px",
   },
+  mapLink: {
+    color: "#3b82f6",
+    textDecoration: "underline",
+    cursor: "pointer",
+    display: "inline-block",
+  },
+
+  coordinates: {
+    fontSize: "12px",
+    color: "#64748b",
+    marginTop: "4px",
+    cursor: "pointer",
+  },
+
+  responsiveCard: {
+    display: "none",
+    "@media (max-width: 768px)": {
+      display: "block",
+      padding: "16px",
+      marginBottom: "16px",
+      backgroundColor: "#fff",
+      borderRadius: "8px",
+      boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+    },
+  },
+
+  table: {
+    width: "100%",
+    borderCollapse: "collapse",
+    fontSize: "14px",
+    whiteSpace: "nowrap",
+    "@media (max-width: 768px)": {
+      display: "none",
+    },
+  },
+
+  tableContainer: {
+    overflowX: "auto",
+    borderRadius: "8px",
+    boxShadow: "0 4px 6px rgba(0,0,0,0.08)",
+    "@media (max-width: 768px)": {
+      boxShadow: "none",
+    },
+  },
 };
+const MobileCard = ({ item, checkedBookings, handleRowClick, openInMaps }) => (
+  <div style={styles.responsiveCard} onClick={() => handleRowClick(item.id)}>
+    <div>
+      {item.isNew && !checkedBookings.has(item.id) && (
+        <span style={styles.newBadge}>New</span>
+      )}
+    </div>
+
+    <h3>{item.fullName}</h3>
+
+    <div>
+      <a
+        href={`mailto:${item.email}`}
+        style={styles.link}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {item.email}
+      </a>
+    </div>
+
+    <div>
+      <a
+        href={`https://wa.me/${item.whatsappNumber}`}
+        style={styles.link}
+        onClick={(e) => e.stopPropagation()}
+      >
+        WhatsApp: {item.whatsappNumber}
+      </a>
+    </div>
+
+    {item.alternateNumber && (
+      <div>Alternate Number: {item.alternateNumber}</div>
+    )}
+
+    <div style={{ marginTop: "12px" }}>
+      <strong>{item.serviceName}</strong>
+      <div style={styles.badge}>{item.selectedVariant}</div>
+      <div>{item.selectedDuration}</div>
+    </div>
+
+    <div style={{ marginTop: "12px" }}>
+      <div>{item.deliveryAddress}</div>
+      {item.latitude && item.longitude ? (
+        <div
+          style={{ ...styles.coordinates, ...styles.mapLink }}
+          onClick={(e) => openInMaps(item.latitude, item.longitude, e)}
+        >
+          📍 View on Map
+        </div>
+      ) : (
+        <div style={{ ...styles.coordinates }}>Location not available</div>
+      )}
+    </div>
+
+    <div style={{ marginTop: "12px" }}>
+      <strong>Additional Info:</strong>
+      <div>{item.message || "No additional message"}</div>
+    </div>
+  </div>
+);
 
 const Booking = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hoveredRow, setHoveredRow] = useState(null);
   const [checkedBookings, setCheckedBookings] = useState(() => {
-    const savedChecks = localStorage.getItem('checkedBookingItems');
+    const savedChecks = localStorage.getItem("checkedBookingItems");
     return savedChecks ? new Set(JSON.parse(savedChecks)) : new Set();
   });
 
@@ -115,7 +219,7 @@ const Booking = () => {
           timestamp: fetchedData[key].timestamp || Date.now(),
           ...fetchedData[key],
         }));
-        
+
         formattedData.sort((a, b) => b.timestamp - a.timestamp);
         setData(formattedData);
       } else {
@@ -139,14 +243,20 @@ const Booking = () => {
   const handleRowClick = (id) => {
     const updatedCheckedBookings = new Set([...checkedBookings, id]);
     setCheckedBookings(updatedCheckedBookings);
-    
+
     const checkedRef = ref(database, "checkedBookingItems");
     set(checkedRef, [...updatedCheckedBookings]);
-    
+
     localStorage.setItem(
-      'checkedBookingItems',
+      "checkedBookingItems",
       JSON.stringify([...updatedCheckedBookings])
     );
+  };
+
+  const openInMaps = (latitude, longitude, e) => {
+    e.stopPropagation();
+    const mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+    window.open(mapsUrl, "_blank");
   };
 
   if (loading) {
@@ -169,6 +279,19 @@ const Booking = () => {
   return (
     <div style={styles.container}>
       <h1 style={styles.header}>Service Bookings</h1>
+
+      {/* Mobile View */}
+      {data.map((item) => (
+        <MobileCard
+          key={item.id}
+          item={item}
+          checkedBookings={checkedBookings}
+          handleRowClick={handleRowClick}
+          openInMaps={openInMaps}
+        />
+      ))}
+
+      {/* Desktop View */}
       <div style={styles.tableContainer}>
         <table style={styles.table}>
           <thead>
@@ -186,8 +309,11 @@ const Booking = () => {
               <tr
                 key={item.id}
                 style={{
-                  backgroundColor: hoveredRow === item.id ? "#f8fafc" : "transparent",
-                  ...(item.isNew && !checkedBookings.has(item.id) && styles.newRow),
+                  backgroundColor:
+                    hoveredRow === item.id ? "#f8fafc" : "transparent",
+                  ...(item.isNew &&
+                    !checkedBookings.has(item.id) &&
+                    styles.newRow),
                   ...(checkedBookings.has(item.id) && styles.checkedRow),
                   transition: "background-color 0.2s",
                   cursor: "pointer",
@@ -206,12 +332,20 @@ const Booking = () => {
                 </td>
                 <td style={styles.td}>
                   <div>
-                    <a href={`mailto:${item.email}`} style={styles.link}>
+                    <a
+                      href={`mailto:${item.email}`}
+                      style={styles.link}
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       {item.email}
                     </a>
                   </div>
                   <div>
-                    <a href={`https://wa.me/${item.whatsappNumber}`} style={styles.link}>
+                    <a
+                      href={`https://wa.me/${item.whatsappNumber}`}
+                      style={styles.link}
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       WhatsApp: {item.whatsappNumber}
                     </a>
                   </div>
@@ -226,9 +360,20 @@ const Booking = () => {
                 </td>
                 <td style={styles.td}>
                   <div>{item.deliveryAddress}</div>
-                  <div style={{ fontSize: "12px", color: "#64748b" }}>
-                    {item.latitude}, {item.longitude}
-                  </div>
+                  {item.latitude && item.longitude ? (
+                    <div
+                      style={{ ...styles.coordinates, ...styles.mapLink }}
+                      onClick={(e) =>
+                        openInMaps(item.latitude, item.longitude, e)
+                      }
+                    >
+                      📍 View on Map
+                    </div>
+                  ) : (
+                    <div style={{ ...styles.coordinates }}>
+                      Location not available
+                    </div>
+                  )}
                 </td>
                 <td style={styles.td}>
                   {item.message || "No additional message"}
