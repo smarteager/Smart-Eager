@@ -59,7 +59,7 @@ const About = () => {
 
                   <div>
                     <h6 className="section__subtitle">Need Any Help?</h6>
-                    <h4>+91-9306174774</h4>
+                    <h4>+91-7419011362</h4>
                   </div>
                 </div>
               </div>

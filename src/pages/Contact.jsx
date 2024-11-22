@@ -244,7 +244,7 @@ const Contact = () => {
                 </p>
                 <div className="d-flex align-items-center gap-2">
                   <h6 className="fs-6 mb-0">Phone:</h6>
-                  <p className="section__description mb-0"> +91-9306174774</p>
+                  <p className="section__description mb-0"> +91-7419011362</p>
                 </div>
 
                 <div className="d-flex align-items-center gap-2">
