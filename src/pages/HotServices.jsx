@@ -5,7 +5,7 @@ import Refrigerator1 from "../../src/assets/all-images/refrigrator/1.jpg"
 import Refrigerator2 from "../../src/assets/all-images/refrigrator/8.jpg"
 import Geyser1 from "../../src/assets/all-images/Geyser/geyser2.webp"
 import SplitAC1 from "../../src/assets/all-images/Split AC/5.jpg"
-import Heater1 from "../../src/assets/all-images/heater/1.jpg"
+import Heater1 from "../../src/assets/heater-product.png"
 
 const services = [
   {

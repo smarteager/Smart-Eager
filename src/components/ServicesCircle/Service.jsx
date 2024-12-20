@@ -4,13 +4,13 @@ import Ref from "../../assets/all-images/Washing machine/ref.png";
 import Geyser from "../../assets/all-images/Washing machine/geyser.png";
 import AC from "../../assets/all-images/Split AC/13.png";
 import RO from "../../assets/all-images/RO.jpg";
+import RH from "../../assets/Room-heater2.png";
 
 const Services = () => {
   const services = [
     {
       name: "Room Heater",
-      image:
-        "https://imgs.search.brave.com/KJ7hzTCObsVeawIFiu3zCXLBM6gxEjvSiQhwWpZ533o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nbWFydC5jb20v/ZmlsZXMvNi9TcGFj/ZS1IZWF0ZXItRG93/bmxvYWQtUE5HLUlt/YWdlLnBuZw",
+      image:RH,
       link: "/room-heater",
     },
     {
