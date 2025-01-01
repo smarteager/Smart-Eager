@@ -1,11 +1,13 @@
-import WM1 from "../../src/assets/all-images/Washing machine/3.jpg"
-import WM2 from "../../src/assets/all-images/Washing machine/4.jpg"
-import WAC1 from "../../src/assets/all-images/Window ac/18.jpg"
-import Refrigerator1 from "../../src/assets/all-images/refrigrator/1.jpg"
-import Refrigerator2 from "../../src/assets/all-images/refrigrator/8.jpg"
-import Geyser1 from "../../src/assets/all-images/Geyser/geyser2.webp"
-import SplitAC1 from "../../src/assets/all-images/Split AC/5.jpg"
-import Heater1 from "../../src/assets/heater-product.png"
+import WM1 from "../../src/assets/all-images/Washing machine/3.jpg";
+import WM2 from "../../src/assets/all-images/Washing machine/4.jpg";
+import WAC1 from "../../src/assets/all-images/Window ac/18.jpg";
+import Refrigerator1 from "../../src/assets/all-images/refrigrator/1.jpg";
+import Refrigerator2 from "../../src/assets/all-images/refrigrator/8.jpg";
+import Geyser1 from "../../src/assets/all-images/Geyser/geyser2.webp";
+import SplitAC1 from "../../src/assets/all-images/Split AC/5.jpg";
+import Heater1 from "../../src/assets/heater-product.png";
+import Heater2 from "../../src/assets/all-images/heater/9fins.png";
+import Heater3 from "../../src/assets/all-images/heater/11fins.png";
 
 const services = [
   {
@@ -13,7 +15,7 @@ const services = [
     name: "Window AC",
     code: 100,
     price: "₹2,000/month",
-    image: WAC1 ,
+    image: WAC1,
     description: "1.5 Ton Split AC, Energy Efficient, Remote Control Included.",
     variants: {
       "1.0 TON": {
@@ -45,7 +47,7 @@ const services = [
     name: "Refrigerator",
     code: 104,
     price: "₹1,200/month",
-    image:Refrigerator1,
+    image: Refrigerator1,
     description: "Double Door Refrigerator, 250L Capacity, Energy Efficient.",
     variants: {
       Small: {
@@ -77,7 +79,7 @@ const services = [
     name: "Washing Machine",
     code: 102,
     price: "₹900/month",
-    image: WM1 ,
+    image: WM1,
     description: "Fully Automatic Washing Machine, 7 Kg Capacity.",
     variants: {
       "Top Load": {
@@ -124,20 +126,45 @@ const services = [
 
   {
     id: 6,
-    name: "Oil RoomHeater",
+    name: "Heater On Rent 09 fins",
     code: 107,
-    price: "₹1000/month",
+    price: "₹1050/month",
+    image: Heater2,
+    description: "Portable Room Heater, Adjustable Temperature.",
+    variants: {
+      "9 FIN": {
+        durations: {
+          Rent: "₹1050, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Nov/Dec)",
+        },
+      },
+    },
+  },
+  {
+    id: 6,
+    name: "Heater On Rent 11 fins",
+    code: 107,
+    price: "₹1199/month",
+    image: Heater3,
+    description: "Portable Room Heater, Adjustable Temperature.",
+    variants: {
+      "11 FIN": {
+        durations: {
+          Rent: "₹1199, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Nov/Dec)",
+        },
+      },
+    },
+  },
+  {
+    id: 6,
+    name: "Heater On Rent 11 fins",
+    code: 107,
+    price: "₹1399/month",
     image: Heater1,
     description: "Portable Room Heater, Adjustable Temperature.",
     variants: {
       "11 FIN": {
         durations: {
-          Rent: "₹3500, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Nov/Dec)",
-        },
-      },
-      "13 FIN": {
-        durations: {
-          Rent: "₹4000, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Nov/Dec)",
+          Rent: "₹1399, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Nov/Dec)",
         },
       },
     },
@@ -147,7 +174,7 @@ const services = [
     name: "Split AC",
     code: 100,
     price: "₹2,000/month",
-    image:SplitAC1,
+    image: SplitAC1,
     description: "1.5 Ton Split AC, Energy Efficient, Remote Control Included.",
     variants: {
       "1.0 TON": {
