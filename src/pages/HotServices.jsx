@@ -140,7 +140,7 @@ const services = [
     },
   },
   {
-    id: 6,
+    id: 100,
     name: "Heater On Rent 11 fins",
     code: 107,
     price: "₹1199/month",
@@ -155,7 +155,7 @@ const services = [
     },
   },
   {
-    id: 6,
+    id: 101,
     name: "Heater On Rent 11 fins",
     code: 107,
     price: "₹1399/month",
