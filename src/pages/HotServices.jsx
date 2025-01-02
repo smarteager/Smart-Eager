@@ -156,13 +156,13 @@ const services = [
   },
   {
     id: 101,
-    name: "Heater On Rent 11 fins",
+    name: "Heater On Rent 13 fins",
     code: 107,
     price: "₹1399/month",
     image: Heater1,
     description: "Portable Room Heater, Adjustable Temperature.",
     variants: {
-      "11 FIN": {
+      "13 FIN": {
         durations: {
           Rent: "₹1399, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Nov/Dec)",
         },
