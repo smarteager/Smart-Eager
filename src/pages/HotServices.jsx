@@ -134,7 +134,7 @@ const services = [
     variants: {
       "9 FIN": {
         durations: {
-          Rent: "₹1050, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Nov/Dec)",
+          Rent: "₹1050, Payment in Advance, Security Deposit ₹1999 extra, Full Season (Till Jan/Feb)",
         },
       },
     },
